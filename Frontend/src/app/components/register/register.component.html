@@ -1,0 +1,31 @@
+<body>
+    <div class="center">
+        <h1>Register</h1>
+        <form (submit)="registerNewUser()" [formGroup]="fg">
+            <div class="txt_field">
+                <input type="text" required id="name" class="form-control" formControlName="fullname">
+                <span></span>
+                <label>Name and Surname</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" required id="password" class="form-control" formControlName="password">
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" required id="email" class="form-control" formControlName="email">
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="number" required id="idNumber" class="form-control" formControlName="idNumber">
+                <span></span>
+                <label>ID Number</label>
+            </div>
+            <input type="submit" value="Register">
+            <div class="signup_link">
+                Already a member? <a (click)="goToLoginPage()">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
